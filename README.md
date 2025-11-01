@@ -3,7 +3,7 @@
 This project aims to analyze real estate data to find out how various factors influence house prices.
 
 
-## Problem Statement
+## Problem Statement :
 
 The goal of this project is to analyze data and be able to answer questions like:
 
@@ -16,45 +16,31 @@ The goal of this project is to analyze data and be able to answer questions like
 7. How do these variables affect the median value prices?
 
 
-## Data description
+## Data description :
 
-Source:
+Source: The dataset was obtained from UCI machine Learning Repository.
 
 Rows and Columns: 511 Rows and 14 columns
 
 Description of variables:
 
 CRIM - per capita crime rate by town
-
 ZN - proportion of residential land zoned for lots over 25,000 sq.ft.
-
 INDUS - proportion of non-retail business acres per town
-
 CHAS- Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
-
 NOX - nitric oxides concentration (parts per 10 million)
-
 RM - average number of rooms per dwelling
-
 AGE - proportion of owner-occupied units built prior to 1940
-
 DIS - weighted distances to five Boston employment centres
-
 RAD - index of accessibility to radial highways
-
 TAX - full value property-tax rate per $10,000
-
 PTRATIO - pupil teacher ratio by town
-
 B- 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town
-
 LSTAT - % lower status of the population
-
 MEDV - Median value of owner-occupied homes in $1000's
-
 Target variable: MEDV (median value price)
 
-## Methodology
+## Methodology :
 
 1. Data cleaning and preprocessing  
 2. Exploratory Data Analysis (EDA)
@@ -75,18 +61,24 @@ Target variable: MEDV (median value price)
 
 1. Most of the towns have a median value price around 20,000 $.
    The outliers indicate that the median value prices for prime locations is around 40-50(1000$).
+
+   ![medv distribution](https://github.com/user-attachments/assets/41c4774b-857a-4141-913f-104b5faa6fc7)
+
    
-2. Upper mid and mid covers 80% of the homes with upper mid covering 50% of all the homes.
+3. Upper mid and mid covers 80% of the homes with upper mid covering 50% of all the homes.
    Upper mid represents 6-7 rooms per dwelling.
    
-3. Most of the owner occupied homes are built prior to 1940s as the graph portrays maximum frequency at 100.
+4. Most of the owner occupied homes are built prior to 1940s as the graph portrays maximum frequency at 100.
    Here 100 is the proportion of owner occupied homes built prior to 1940s and the frequency around 160 is the no. of towns having that frequency.
    
-4. The crime rate per capita is very low in these areas with almost 350 entries with 0 crime rate as the graph is excessively right skewed.
+5. The crime rate per capita is very low in these areas with almost 350 entries with 0 crime rate as the graph is excessively right skewed.
    
-5. Almost 90% of the areas don't tract bounds with Charles river, so a random pick would most likely not ensure a river view.
+6. Almost 90% of the areas don't tract bounds with Charles river, so a random pick would most likely not ensure a river view.
+
+   ![charles river tract bounds count](https://github.com/user-attachments/assets/ee41e04a-153a-49c4-8328-d24983d66fad)
+
     
-6. As per the correlation values - RM, LSTAT, PTRATIO, TAX, INDUS are our variables of interest.
+7. As per the correlation values - RM, LSTAT, PTRATIO, TAX, INDUS are our variables of interest.
   a. As the average no of rooms per dwelling inceases the median value price increases.
   b. As proportion of lower status population increases the median value price decreases.
   c. Lower pupil to teacher ratios indicate higher prices.
@@ -97,4 +89,3 @@ Target variable: MEDV (median value price)
 
 The analysis successfully interprets what and how do variables affect the mean value prices of homes.
 
-## References :
