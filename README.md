@@ -5,7 +5,7 @@ This project aims to analyze real estate data to find out how various factors in
 
 ## Problem Statement :
 
-The goal of this project is to analyze data and be able to answer questions like:
+The goal of this project is to analyze data and be able to answer business impact questions like:
 
 1. What are the house prices for most of the towns?
 2. What are the most common property types?
@@ -46,8 +46,10 @@ Description of variables:<br>
 2. Exploratory Data Analysis (EDA)
    a. Univariate Analysis
    b. Bivariate Analysis
-3. Statistical analysis (correlations, hypothesis testing)    
-4. Insights and conclusions
+3. Statistical analysis (correlations, hypothesis testing)
+4. SQL analysis
+5. Results and Insights
+6. Conclusion
 
 ## Technology Used :
 
@@ -55,7 +57,55 @@ Description of variables:<br>
 - Pandas, NumPy  
 - Matplotlib, Seaborn  
 - Scikit-learn  
-- Jupyter Notebook  
+- Jupyter Notebook
+
+## SQL Analysis
+
+The dataset was imported into MySQL using the following command:
+
+LOAD DATA LOCAL INFILE 'C:/data/data.csv'
+
+INTO TABLE housing
+
+FIELDS TERMINATED BY ','
+
+LINES TERMINATED BY '\n'
+
+IGNORE 1 ROWS;
+
+A few queries that were run are as follows:
+
+ 1. Row count:
+    
+<p align = 'center'>
+<img width="500" height="150" alt="image" src="https://github.com/user-attachments/assets/2bb21b05-2923-4e91-899c-8ef3503337a3" />
+</p>
+
+2. Minimum and Maximum
+   
+<p align='center'>
+<img width="500" height="150" alt="image" src="https://github.com/user-attachments/assets/44d81a61-2383-4341-b062-9e9278dc5cd8" />
+</p>
+
+3. Average Price
+
+<p align = 'center'>
+<img width="500" height="150" alt="image" src="https://github.com/user-attachments/assets/bbc47db1-c479-45de-9a32-28a4bf8e5356" />
+</p>
+
+4. Group Analysis
+
+<p align ='center'>
+<img width="400" height="500" alt="image" src="https://github.com/user-attachments/assets/5b998821-19fe-40b3-849c-53c7f4335853" />
+</p>
+
+5. Categorize prices into high and low price
+   
+<p align ='center'>
+<img width="400" height="500" alt="image" src="https://github.com/user-attachments/assets/08fbef0d-6e67-45c0-8ca1-cb866aa48038" />
+
+
+
 
 ## Results and Insights
 
@@ -88,6 +138,7 @@ Description of variables:<br>
   c. Lower pupil to teacher ratios indicate higher prices.
   d. As property tax rate (TAX) increases, median house price tends to decrease.
   e. As the proportion of non-retail business acres (INDUS) increases, median house price decreases
+
 
 ## Conclusion :
 
